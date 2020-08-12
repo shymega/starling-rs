@@ -1,0 +1,33 @@
+[package]
+name = "starling-rs"
+version = "0.1.0"
+authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
+edition = "2018"
+keywords = ["api", "starling-bank", "banking"]
+description = "Rust SDK for the Starling Bank API"
+license = "Apache 2.0"
+readme = "README.md"
+categories = ["api-bindings", "banking"]
+repository = "https://github.com/shymega/starling-rs"
+
+[lib]
+name = "starling_rs"
+path = "src/lib.rs"
+
+[dependencies]
+serde = "1.0.110"
+serde_json = "1.0.53"
+uuid = "*"
+bigdecimal = "*"
+
+[dependencies.clap]
+features = ["suggestions", "color", "wrap_help"]
+version = "2.33.1"
+
+[dependencies.clippy]
+version = "*"
+optional = true
+
+[dependencies.reqwest]
+version = "0.10"
+features = ["json"]
