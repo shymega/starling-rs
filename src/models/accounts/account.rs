@@ -5,5 +5,5 @@ pub struct Account {
     pub account_uid: UUID,
     pub default_category: UUID,
     pub currency: String,
-    pub created_at: String
+    pub created_at: String,
 }

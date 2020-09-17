@@ -17,9 +17,7 @@ impl Amount {
     }
 
     pub fn to_fmt_string(&self) -> String {
-        format!("{} {}",
-            self.to_conventional_units(),
-            self.currency)
+        format!("{} {}", self.to_conventional_units(), self.currency)
     }
 }
 
@@ -28,7 +26,7 @@ mod test {
     use super::Amount;
 
     #[test]
-   pub fn test_fmt() {
+    pub fn test_fmt() {
         let amount = Amount::new("GBP".to_owned(), 101921);
 
         assert_eq!(amount.currency, "GBP");
