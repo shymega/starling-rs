@@ -22,10 +22,6 @@ serde_json = "1.0.53"
 features = ["v4", "serde"]
 version = "0.8.1"
 
-[dependencies.clap]
-features = ["suggestions", "color", "wrap_help"]
-version = "2.33.1"
-
 [dependencies.clippy]
 version = "*"
 optional = true
