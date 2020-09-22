@@ -1,6 +1,13 @@
-#[derive(Debug)]
 pub struct Credentials {
     pub access_token: String,
+}
+
+impl Default for Credentials {
+    fn default() -> Credentials {
+        Credentials {
+            access_token: "".to_owned()
+        }
+    }
 }
 
 impl Credentials {
