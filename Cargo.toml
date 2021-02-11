@@ -23,9 +23,6 @@ serde_derive = "1.0.123"
 features = ["v4", "serde"]
 version = "0.8.1"
 
-[dependencies.clippy]
-version = "*"
-optional = true
 
 [dependencies.reqwest]
 version = "0.10"
