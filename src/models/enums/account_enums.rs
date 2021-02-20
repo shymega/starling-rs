@@ -1,3 +1,4 @@
+#[derive(Debug, Copy, Clone)]
 #[allow(non_camel_case_types)]
 pub enum AccountHolderType {
     INDIVIDUAL,
@@ -5,4 +6,5 @@ pub enum AccountHolderType {
     SOLE_TRADER,
     JOINT,
     BANKING_AS_A_SERVICE,
+    UNDEFINED,
 }

@@ -1,2 +1,5 @@
-pub mod error_detail;
-pub mod error_response;
+mod error_detail;
+mod error_response;
+
+pub use error_detail::*;
+pub use error_response::*;
