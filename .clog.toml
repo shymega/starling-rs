@@ -1,7 +1,0 @@
-[clog]
-repository = "https://github.com/shymega/starling-rs"
-subtitle = "Rust SDK for the Starling API"
-link-style = "github"
-changelog = "CHANGELOG.md"
-output-format = "markdown"
-from-latest-tag = true
