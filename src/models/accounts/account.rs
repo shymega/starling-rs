@@ -1,36 +1,29 @@
 use uuid::Uuid as UUID;
-use crate::models::enums::AccountCurrencies;
 
-#[derive(Debug)]
+#[derive(Debug, Default)]
 pub struct Account {
     pub description: String,
     pub account_uid: UUID,
     pub default_category: UUID,
-    pub currency: AccountCurrencies,
+    pub currency: String,
     pub created_at: String,
 }
 
 impl Account {
-    pub fn new(description: &str, account_uid: UUID, default_category: UUID, currency: AccountCurrencies, created_at: &str) -> Account {
+    #[allow(clippy::clippy::must_use_candidate)] // need to look into this lint, allowing for now.
+    pub fn new(
+        description: &str,
+        account_uid: UUID,
+        default_category: UUID,
+        currency: &str,
+        created_at: &str,
+    ) -> Account {
         Account {
             description: description.to_owned(),
-            account_uid: account_uid.to_owned(),
+            account_uid,
             default_category,
-            currency,
+            currency: currency.to_owned(),
             created_at: created_at.to_owned(),
         }
     }
-}
-
-impl Default for Account {
-    fn default() -> Account {
-        Account {
-            description: String::new(),
-            account_uid: UUID::new_v4(),
-            default_category: UUID::new_v4(),
-            currency: AccountCurrencies::GBP,
-            created_at: String::new(),
-        }
-    }
-
 }
