@@ -4,20 +4,10 @@ use reqwest::Client as reqwest_client;
 use std::fmt;
 
 #[allow(dead_code)]
-#[derive(Clone)]
+#[derive(Clone, Default, Debug)]
 pub struct Client {
     pub auth: Credentials,
     http: reqwest_client,
-}
-
-impl Client {
-    #[allow(clippy::clippy::must_use_candidate)]
-    pub fn default() -> Client {
-        Client {
-            auth: Credentials::default(),
-            http: reqwest_client::default(),
-        }
-    }
 }
 
 impl fmt::Debug for Client {
