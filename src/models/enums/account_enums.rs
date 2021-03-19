@@ -8,3 +8,9 @@ pub enum AccountHolderType {
     BANKING_AS_A_SERVICE,
     UNDEFINED,
 }
+
+impl Default for AccountHolderType {
+    fn default() -> AccountHolderType {
+        AccountHolderType::UNDEFINED
+    }
+}
