@@ -43,13 +43,19 @@ mod test {
     use super::CurrencyAndAmount;
 
     #[test]
-    pub fn test_fmt() {
-        let amount = CurrencyAndAmount::new("GBP", 101_921);
+    pub fn test_string_formatting() {
+        let amount = CurrencyAndAmount::new("GBP", 1021);
+
+        assert_eq!(amount.to_string(), "10.21 GBP");
+    }
+
+    #[test]
+    pub fn test_val() {
+        let amount = CurrencyAndAmount::new("GBP", 235);
 
         assert_eq!(amount.currency, "GBP");
-        assert_eq!(amount.minor_units, 101_921);
+        assert_eq!(amount.minor_units, 235);
 
-        assert_eq!(amount.to_conventional_units(), 1019.21);
-        assert_eq!(amount.to_string(), "1019.21 GBP");
+        assert_eq!(amount.to_conventional_units(), 2.35);
     }
 }
