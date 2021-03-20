@@ -5,6 +5,6 @@
 pub struct Endpoint;
 
 impl Endpoint {
-    pub const SANDBOX: &'static str = "https://oauth-sandbox.starlingbank.com";
-    pub const PRODUCTION: &'static str = "https://oauth.starlingbank.com";
+    pub const SANDBOX: &'static str = "https://api-sandbox.starlingbank.com";
+    pub const PRODUCTION: &'static str = "https://api.starlingbank.com";
 }
