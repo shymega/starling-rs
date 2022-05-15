@@ -14,17 +14,14 @@ impl CurrencyAndAmount {
         }
     }
 
-    #[allow(clippy::clippy::must_use_candidate)]
     pub fn get_currency(&self) -> String {
         self.currency.clone()
     }
 
-    #[allow(clippy::clippy::must_use_candidate)]
     pub fn get_minor_units(&self) -> i32 {
         self.minor_units
     }
 
-    #[allow(clippy::clippy::must_use_candidate)]
     #[allow(clippy::cast_precision_loss)]
     pub fn to_conventional_units(&self) -> f64 {
         f64::from(self.minor_units) / f64::from(100)
