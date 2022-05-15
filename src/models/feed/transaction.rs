@@ -1,5 +1,6 @@
 use crate::models::common::CurrencyAndAmount;
 use uuid::Uuid as UUID;
+use crate::models::enums::{Country, CounterPartyType};
 
 type DateTimeISO = String;
 
@@ -16,7 +17,7 @@ pub struct Transaction {
     pub settlementTime: DateTimeISO,
     pub source: String,
     pub status: String,
-    pub counterPartytype: String,
+    pub counterPartytype: CounterPartyType,
     pub counterPartyUid: UUID,
     pub counterPartyName: String,
     pub counterPartySubEntityUid: UUID,
@@ -24,7 +25,7 @@ pub struct Transaction {
     pub counterPartySubEntityIdentifier: String,
     pub counterPartySubEntitySubIdentifier: String,
     pub reference: String,
-    pub country: String,
+    pub country: Country,
     pub spendingCategory: String,
     pub hasAttachment: bool,
 }
