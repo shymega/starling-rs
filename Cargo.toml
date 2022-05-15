@@ -2,7 +2,7 @@
 name = "starling-rs"
 version = "0.1.0"
 authors = ["Dom Rodriguez <shymega@shymega.org.uk>"]
-edition = "2018"
+edition = "2021"
 keywords = ["api", "starling-bank", "banking"]
 description = "Rust library for Starling Bank's API"
 license = "Apache-2.0 or MIT"
