@@ -15,7 +15,7 @@ impl CurrencyAndAmount {
     }
 
     pub fn get_currency(&self) -> String {
-        self.currency.clone()
+        self.currency
     }
 
     pub fn get_minor_units(&self) -> i32 {
