@@ -1,9 +1,10 @@
-use reqwest::Client as reqwest_client;
-use crate::models::enums::Endpoint;
+use crate::api::Endpoint;
+use crate::Authenticator;
 
 #[allow(dead_code)]
-#[derive(Clone, Default, Debug)]
+#[derive(Default, Debug)]
 pub struct Client {
-    http: reqwest_client,
+    http: attohttpc::Session,
     endpoint: Endpoint,
+    auth: Authenticator
 }

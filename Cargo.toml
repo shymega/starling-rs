@@ -15,15 +15,16 @@ name = "starling_rs"
 path = "src/lib.rs"
 
 [dependencies]
-serde = "1.0.124"
-serde_json = "1.0.64"
-serde_derive = "1.0.124"
-bigdecimal = "0.2.0"
+serde = "1.0.137"
+serde_json = "1.0.81"
+serde_derive = "1.0.137"
+bigdecimal = "0.3.0"
+chrono = "0.4.19"
 
 [dependencies.uuid]
 features = ["v4", "serde"]
-version = "0.8.2"
+version = "1.0.0"
 
-[dependencies.reqwest]
-version = "0.11.2"
-features = ["json", "blocking"]
+[dependencies.attohttpc]
+version = "0.19.1"
+features = ["json"]
