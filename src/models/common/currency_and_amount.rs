@@ -7,10 +7,9 @@ pub struct CurrencyAndAmount {
 }
 
 impl CurrencyAndAmount {
-    #[allow(clippy::clippy::must_use_candidate)]
-    pub fn new(currency: &str, minor_units: i32) -> CurrencyAndAmount {
-        CurrencyAndAmount {
-            currency: currency.to_owned(),
+    pub fn new(currency: &str, minor_units: i32) -> Self {
+        Self {
+            currency: String::from(currency),
             minor_units,
         }
     }
