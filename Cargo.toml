@@ -26,5 +26,5 @@ features = ["v4", "serde"]
 version = "1.0.0"
 
 [dependencies.attohttpc]
-version = "0.19.1"
+version = "0.22.0"
 features = ["json"]
