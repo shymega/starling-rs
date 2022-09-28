@@ -1,10 +1,10 @@
-use crate::api::Endpoint;
 use crate::Authenticator;
+use crate::EndpointKind;
 
 #[allow(dead_code)]
-#[derive(Default, Debug)]
+#[derive(Debug)]
 pub struct Client {
     http: attohttpc::Session,
-    endpoint: Endpoint,
-    auth: Authenticator
+    endpoint: EndpointKind,
+    auth: Authenticator,
 }

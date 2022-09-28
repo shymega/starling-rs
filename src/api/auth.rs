@@ -1,10 +1,9 @@
-#[derive(Debug, Clone, PartialEq)]
-pub struct Authenticator {
-    oauth_holder: OAuthHolder,
-    api_key: String,
-    api_secret: String,
-    personal_access_token: String,
-}
+use crate::AuthenticationKind;
 
-#[derive(Debug, Clone, Copy, PartialEq)]
+pub type Authenticator = AuthenticationKind;
+
+#[derive(Debug, Clone)]
 pub struct OAuthHolder {}
+
+#[derive(Debug, Clone)]
+pub struct PATHolder {}
