@@ -10,6 +10,9 @@ readme = "README.md"
 categories = ["api-bindings", "banking"]
 repository = "https://github.com/shymega/starling-rs"
 
+[workspace]
+members = [".", "starling-rs-openapi"]
+
 [lib]
 name = "starling_rs"
 path = "src/lib.rs"
