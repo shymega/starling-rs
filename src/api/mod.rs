@@ -31,9 +31,9 @@ mod endpoints {
 }
 
 mod authentication_kinds {
-    use super::auth::{PATHolder, OAuthHolder};
+    use super::auth::{OAuthHolder, PATHolder};
 
-    #[derive(Debug, Clone)]
+    #[derive(Debug, Clone, Copy)]
     pub enum AuthenticationKind {
         OAuthToken(OAuthHolder),
         PersonalAccessToken(PATHolder),
@@ -43,15 +43,21 @@ mod authentication_kinds {
     impl ToString for AuthenticationKind {
         fn to_string(&self) -> String {
             match self {
-                Self::PersonalAccessToken(pat_holder) => format!("PAT: {:?}", pat_holder),
-                Self::OAuthToken(oauth_holder) => format!("OAuth: {:?}", oauth_holder),
-                Self::Unconfigured => format!("Unconfigured authentication type."),
+                Self::PersonalAccessToken(pat_holder) => {
+                    format!("PAT: {:?}", pat_holder)
+                }
+                Self::OAuthToken(oauth_holder) => {
+                    format!("OAuth: {:?}", oauth_holder)
+                }
+                Self::Unconfigured => {
+                    "Unconfigured authentication type.".to_string()
+                }
             }
         }
     }
 }
 
 pub use self::auth::{Authenticator, OAuthHolder, PATHolder};
+pub use self::authentication_kinds::AuthenticationKind;
 pub use self::client::Client;
 pub use self::endpoints::EndpointKind;
-pub use self::authentication_kinds::AuthenticationKind;

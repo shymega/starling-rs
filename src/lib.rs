@@ -18,3 +18,7 @@
 mod api;
 
 pub use api::*;
+
+mod models {
+    openapi_struct_gen::include!("starling_api");
+}
